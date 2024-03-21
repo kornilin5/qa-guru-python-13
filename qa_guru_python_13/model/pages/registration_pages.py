@@ -13,7 +13,8 @@ class RegistrationPage:
         browser.all('[id^=google_ads][id$=container__]').perform(
             command.js.remove)
         browser.driver.execute_script(
-            "document.querySelector('.body-height').style.transform='scale(.65)'")
+            "document.querySelector('.body-height').style.transform='scale(.65)'"
+        )
         browser.element('#submit').perform(command.js.scroll_into_view)
 
     def registration_form_page(self, user: Users):
